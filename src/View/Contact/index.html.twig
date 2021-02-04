@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    Mes messages - {{ parent() }}
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron bg-dark">
+        <h2 class="text-center text-white">Mes messages</h2>
+    </div>
+        {% for contact in contact %}
+
+            <div class="container" style="width: 50rem;">
+                <div class="card text-center mb-3">
+                    <div class="card-header text-white bg-dark">
+                        Message de {{ contact.firstname }}
+                    </div>
+                    <div class="card-body border-muted mb-3">
+                        <a class="btn btn-dark btn-md" href="/contact/show/{{ contact.id }}" role="button">Voir</a>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

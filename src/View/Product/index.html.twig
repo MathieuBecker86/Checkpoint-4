@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<div class="container bg-secondary">
+    <div class="row shop-items">
+
+        {% for product in products %}
+            <div class="col-sm">
+                <div class="card" style="width: 19rem;">
+                    <div class="card-body bg-dark">
+                        <h5 class="card-title shop-item-title text-white">{{ product.nom }}</h5>
+                        <p class="card-text shop-item-details">{{ product.description }} </p>
+                        <img src='{{ product.lien_image }}' class="card-img shop-item-image"
+                             alt="..."/></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+</main>
+        {% endblock %}

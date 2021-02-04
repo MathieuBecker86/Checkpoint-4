@@ -1,0 +1,52 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Réservation{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron" style="background:rgb(157,30,29)">
+        <h1 class="text-center text-white">Réservations</h1>
+    </div>
+
+    <div class="container">
+        <div class="card text-center border-danger mb-3">
+            <br>
+            {% for reservation in reservations %}
+                {% if reservation.id_client == session.id or session.use_admin == 1 %}
+
+                    <a class="btn btn-primary btn-md" href="/reservation/show/{{ reservation.id }}">Modifier</a>
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th scope="col">N° client</th>
+                            <th scope="col">montant</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Commentaire</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">{{ reservation.id_client }}</th>
+                            <td>{{ reservation.montant }}</td>
+                            <td>{{ reservation.date }}</td>
+                            <td>{{ reservation.commentaire }}</td>
+                        </tr>
+                        </tbody>
+                    </table></br>
+                    </br>
+                {% endif %}
+            {% else %}
+                <li>Nothing to display</li>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    </ul>
+    </br>
+    <div class="container text-center">
+    <a class="btn btn-primary btn-md" href="/reservation/add" role="button">Ajouter</a>
+    </div>
+    <br/>
+{% endblock %}

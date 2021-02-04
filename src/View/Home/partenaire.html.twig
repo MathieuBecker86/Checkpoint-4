@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+   Les Partenaires
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron bg-dark">
+        <h1 class="text-center text-white">Formation</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 offset-md-1">
+            <div class="card text-white bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title">Développeur web et web mobile</h5>
+                    <img class="card-img-top" src="https://zupimages.net/up/20/48/8e9o.png" alt="Card image cap">
+                    <p class="card-text">Titre professionnel "Développeur web et web mobile"</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 offset-md-1">
+            <div class="card text-white bg-dark">
+                <div class="card-body">
+                    <h5 class="card-title"> Baccalauréat STT Action commerciale</h5>
+                    <img class="card-img-top" src="https://zupimages.net/up/21/05/rzuo.jpg" alt="Card image cap">
+                    <p class="card-text">Lycée René Cassin, 2014
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascript %}
+{{ parent() }}
+{% endblock %}

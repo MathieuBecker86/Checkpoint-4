@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="jumbotron bg-dark">
+        <h2 class="text-center text-white">Modifier mes Informations</h2>
+    </div>
+    <div class="container text-left">
+        <a class="btn text-white btn-lg bg-dark" href="/User/show/{{ session.id }}">Précédent</a>
+    </div>
+         {% include 'User/_form.html.twig' %}
+    </div>
+{% endblock %}

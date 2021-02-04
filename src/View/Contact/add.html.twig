@@ -1,0 +1,22 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    Contacts - {{ parent() }}
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron bg-dark">
+        <h1 class="text-center text-white">Me contacter</h1>
+        <p class="text-center text-white">N'hésitez pas à me contacter pour tout complément d'information...</p>
+        <p class="text-center text-white">Tél : 06.31.32.46.35</p>
+
+    </div>
+        {% include 'Contact/_form.html.twig' %}
+
+
+{% endblock %}

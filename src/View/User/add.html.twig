@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    Inscription - {{ parent() }}
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron" style="background:rgb(157,30,29)">
+        <h2 class="text-center text-white">Créer un compte</h2>
+    </div>
+    {% include 'User/_form.html.twig' %}
+    <br/>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    S'identifier - {{ parent() }}
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron bg-dark">
+        <h2 class="text-center text-white">Mon espace administrateur</h2>
+    </div>
+    <div class="container" style="width: 20rem;">
+        <form method="post">
+            <div class="card text-center mb-3 bg-dark">
+                <div class="card-body border-secondary mb-3">
+                    <div class="form-group">
+                        <input class="form-control" type="username" name="username" placeholder="Ton identifiant">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Ton Mot de passe">
+                    </div>
+                    <div class="container text-right">
+                    <button type="submit" class="btn btn-primary btn-md">Connexion</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br/>
+{% endblock %}

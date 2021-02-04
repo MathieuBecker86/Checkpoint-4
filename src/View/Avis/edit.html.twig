@@ -1,0 +1,9 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="jumbotron" style="background:rgb(157,30,29)">
+        <h2 class="card-title text-center text-white">Modifier l'avis de {{ avis.nom }}</h2>
+    </div>
+    {% include 'Avis/_form.html.twig' %}
+    </div>
+{% endblock %}

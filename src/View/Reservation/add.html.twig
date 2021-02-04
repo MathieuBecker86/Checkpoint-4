@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Ajoute une nouvelle Réservation{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron" style="background:rgb(157,30,29)">
+        <h2 class="text-center text-white">Ajouter une réservation</h2>
+    </div>
+
+    <div class="container">
+        <div class="card text-center border-danger mb-3">
+            {% include 'Reservation/_form.html.twig' %}
+        </div>
+    </div>
+
+
+{% endblock %}

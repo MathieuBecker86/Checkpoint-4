@@ -1,0 +1,100 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <div class="jumbotron bg-dark">
+        <h2 class="text-center text-white">Mes Informations</h2>
+    </div>
+    <div class="container text-center">
+        <div class="card text-center border-dark mb-3 bg-dark">
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Identifiant</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-secondary">
+                            <h5 class="card-title">{{ session.username }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Nom de famille</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-secondary">
+                            <h5 class="card-title">{{ session.lastname }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Prénom</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-secondary">
+                            <h5 class="card-title">{{ session.firstname }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">E-mail</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header text-secondary">
+                            <h5 class="card-title">{{ session.email }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Téléphone</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                    <div class="card-header text-secondary">
+                            <h5 class="card-title">{{ session.number }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <a class="btn btn-dark btn-md" href="/Home/index">Précédent</a>
+        <a class="btn btn-dark btn-md" href="/User/edit/{{ session.id }}">Modifier les informations</a>
+        <a class="btn btn-dark btn-md" href="/User/delete/{{ session.id }} ">Supprimer mon compte</a>
+    </div>
+    <br/>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    Présentation
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron bg-dark">
+        <h1 class="text-center text-white">Mathieu BECKER</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 offset-md-1">
+            <div class="card text-white bg-dark">
+                <div class="card-body">
+                    <p class="card-text">Riche de mes expériences dans divers secteurs, j'ai décidé de donner un nouveau souffle à ma carrière.
+                        Ma créativité et ma motivation sont mes moteurs. Passionné par le milieu du web, je me suis formé en autodidacte pendant 2 ans avant de me professionnaliser et d'intégrer la Wild Code School de Strasbourg en septembre 2020.
+                        Je suis à la recherche de nouvelles opportunités afin d'évoluer dans ce monde professionnel.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 offset-md-2">
+            <div class="card text-white bg-dark">
+                <div class="card-body">
+                    <img class="card-img-top" src="https://zupimages.net/up/21/05/3993.jpg" alt="Card image cap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascript %}
+{{ parent() }}
+{% endblock %}

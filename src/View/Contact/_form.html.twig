@@ -1,0 +1,30 @@
+<div class="container" style="width: 50rem;">
+    <form method="post">
+        <div class="card text-center mb-3 bg-dark">
+            <div class="card-body border-secondary mb-3">
+                <div class="form-group">
+                    <input type="hidden" value="{{ session.id }}" name="id">
+                    <input class="form-control" type="firstname" name="firstname" value="{{ session.firstname }}"
+                           placeholder="Prénom">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="lastname" name="lastname" value="{{ session.lastname }}"
+                           placeholder="Nom">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" value="{{ session.email }}"
+                           placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Votre message"></textarea>
+                </div>
+
+                <div class="container text-right">
+                    <button type="submit" value="submit" class="btn btn-primary btn-lg">
+                        Envoyer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

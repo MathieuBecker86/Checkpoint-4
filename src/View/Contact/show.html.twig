@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    Mon message - {{ parent() }}
+{% endblock %}
+
+{% block stylesheet %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+        <div class="jumbotron bg-dark">
+            <h2 class="text-center text-white">Message de {{ contact.firstname }}</h2>
+        </div>
+        <div class="container" style="width: 50rem;">
+            <div class="card text-center border-dark mb-3">
+                <div class="card-header">
+                    {{ contact.firstname }} {{ contact.lastname }}
+                </div>
+                <div class="card-header">
+                    {{ contact.email }}
+                </div>
+                <div class="card-header">
+                    {{ contact.message }}
+                </div>
+                <div class="card-footer text-muted">
+                    Posté le {{ contact.date | date("d.m.y") }}
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <a class="btn text-white btn-md bg-dark" href="/Home/index">Revenir à l'accueil</a>
+            <a class="btn text-white btn-md bg-dark" href="/Contact/edit/{{ contact.id }}">Modifier</a>
+            <a class="btn text-white btn-md bg-dark" href="/Contact/delete/{{ contact.id }}">Supprimer</a>
+        </div>
+        <br/>
+{% endblock %}
