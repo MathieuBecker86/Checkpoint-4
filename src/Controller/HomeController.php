@@ -25,19 +25,19 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/index.html.twig');
     }
 
-    public function partenaire()
+    public function formation()
     {
-        return $this->twig->render('Home/partenaire.html.twig');
+        return $this->twig->render('Home/formation.html.twig');
     }
 
-    public function quijesuis()
+    public function presentation()
     {
-        return $this->twig->render('Home/quijesuis.html.twig');
+        return $this->twig->render('Home/presentation.html.twig');
     }
 
-    public function nosengagements()
+    public function experiences()
     {
-        return $this->twig->render('Home/nosengagements.html.twig');
+        return $this->twig->render('Home/experiences.html.twig');
     }
 
 }
